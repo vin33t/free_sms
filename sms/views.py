@@ -2,8 +2,8 @@
 from __future__ import unicode_literals
 
 from django.shortcuts import render
-from forms import SendSmsForm
-from send_sms import send_sms
+from .forms import SendSmsForm
+from .send_sms import send_sms
 from django.http import HttpResponse
 
 # Create your views here.
