@@ -34,10 +34,9 @@
                     <div class="iphone-mockup">
                         <div class="screen">
                             <div class="login-card">
-                                <form class="form-signin" method="post">
+                                <form class="form-signin" role="form" action="" method="post">
                                     {% csrf_token %}
-                                    <input class="form-control" type="text" required="" placeholder="Phone Number" autofocus="" name="phone" value={{ phone }} >
-                                    <textarea class="form-control" rows="5" value={{ message }} name="message" placeholder="Your Message"></textarea><br>
+				    {{ form.as_p }}
                                     <button class="btn btn-primary btn-block btn-lg btn-signin" type="submit" value="Submit">Send SMS</button>
                                 </form>
                             </div>
