@@ -1,7 +1,6 @@
 from django import forms
-from .models import Sms
+#from .models import Sms
 
-class SendSms(forms.ModelForm):
-    class Meta:
-        model = Sms
-        fields = ['phone','message']
+class SendSmsForm(forms.Form):
+    phone = forms.CharField(required = True)
+    message = forms.CharField(required = True, widget = forms.Textarea)
