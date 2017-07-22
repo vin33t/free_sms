@@ -1,0 +1,11 @@
+boto3==1.4.4
+botocore==1.5.86
+Django==1.11.3
+docutils==0.13.1
+gunicorn==19.7.1
+jmespath==0.9.3
+python-dateutil==2.6.1
+pytz==2017.2
+s3transfer==0.1.10
+six==1.10.0
+whitenoise==3.3.0

@@ -1,0 +1,1 @@
+web: gunicorn freesms.wsgi --log-file -
