@@ -36,11 +36,11 @@
                             <div class="login-card">
                                 <form class="form-signin" role="form" action="" method="post">
                                     {% csrf_token %}
-                                    <input class="form-control">
-                                    <input class="form-control">
-                                    <input class="form-control">
-				                    {{ form.as_p }}
-                                    <button class="btn btn-primary btn-block btn-lg btn-signin" type="submit" value="Submit">Send SMS</button>
+                                    <div class="form-control">
+                                    {{ form.phone }}
+                                    {{ form.message }}
+                                    </div>
+				                    <button class="btn btn-primary btn-block btn-lg btn-signin" type="submit" value="Submit">Send SMS</button>
                                 </form>
                             </div>
                         </div><img src="/static/img/iphone.svg" class="device"></div>
