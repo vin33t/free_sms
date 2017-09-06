@@ -4,8 +4,8 @@ import boto3
 def send_sms(phone,message):
     client = boto3.client(
         "sns",
-        aws_access_key_id="AKIAJQU4HOIVD2MPWU7Q",
-        aws_secret_access_key="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",
+        aws_access_key_id="AKIAI4PSHRG4CJSIJYAA",
+        aws_secret_access_key="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",
         region_name="us-east-1"
     )
     client.set_sms_attributes(
