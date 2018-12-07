@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Error</title>
+    <title>Successful</title>
     <link rel="stylesheet" href="{% static "/bootstrap/css/bootstrap.min.css" %}">
     <link rel="stylesheet" href="{% static "/fonts/font-awesome.min.css" %}">
     <link rel="stylesheet" href="{% static "/css/user.css" %}">
@@ -31,6 +31,12 @@
         <div class="container">
             <div class="row message">
                     <h1>Details of Postal Code {{ postal_code }} :</h1>
+                <h1>Country : {{ country }}</h1>
+                <h1>Region : {{ region }}</h1>
+                <h1>Longitude : {{ longitude }}</h1>
+                <h1>Latitide : {{ latitude }}</h1>
+                <h1>Parliamentary Constituency : {{ parliamentary_constituency }}</h1>
+                    <p><a href="/">Click Here</a> Check Another Postal Code</p>
             </div>
         </div>
     </div>
