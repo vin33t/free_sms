@@ -5,6 +5,7 @@ from django.shortcuts import render
 from .forms import SendSmsForm
 from .send_sms import send_sms
 from django.http import HttpResponse,JsonResponse
+import requests
 
 
 # Create your views here.
@@ -18,7 +19,11 @@ def sms_view(request):
             # message = sms.cleaned_data['message']
 
             if send_sms(postal_code) == True:
-                return render(request, 'sms/successful.html',{'postal_code':postal_code})
+                request_url = ('http://api.postcodes.io/postcodes/' + postal_code)
+                response = requests.get(request_url).json()
+                country = response['result']['country']
+
+                return render(request, 'sms/successful.html',{'postal_code':postal_code, 'country':country})
             else:
                 return render(request, 'sms/error.html',{'error':'Unable to send SMS. Please Try Again.'})
         else:
