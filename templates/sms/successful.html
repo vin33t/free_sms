@@ -17,7 +17,7 @@
 <body>
     <nav class="navbar navbar-default">
         <div class="container">
-            <div class="navbar-header"><a class="navbar-brand navbar-link" href="#"><i class="glyphicon glyphicon-phone"></i>Free Text</a>
+            <div class="navbar-header"><a class="navbar-brand navbar-link" href="#"><i class="glyphicon glyphicon-phone"></i>Postal Code Details</a>
                 <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
             </div>
             <div class="collapse navbar-collapse" id="navcol-1">
@@ -32,7 +32,11 @@
             <div class="row message">
                     <h1>Details of Postal Code {{ postal_code }} :</h1>
                 <h1>Country : {{ country }}</h1>
-                    <p><a href="/">Click Here</a> to send another message</p>
+                <h1>Region : {{ region }}</h1>
+                <h1>Longitude : {{ longitude }}</h1>
+                <h1>Latitide : {{ latitude }}</h1>
+                <h1>Parliamentary Constituency : {{ parliamentary_constituency }}</h1>
+                    <p><a href="/">Click Here</a> Check Another Postal Code</p>
             </div>
         </div>
     </div>

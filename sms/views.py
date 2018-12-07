@@ -22,8 +22,12 @@ def sms_view(request):
                 request_url = ('http://api.postcodes.io/postcodes/' + postal_code)
                 response = requests.get(request_url).json()
                 country = response['result']['country']
+                longitude = response['result']['longitude']
+                latitude = response['result']['latitude']
+                region = response['result']['region']
+                parliamentary_constituency = response['result']['parliamentary_constituency']
 
-                return render(request, 'sms/successful.html',{'postal_code':postal_code, 'country':country})
+                return render(request, 'sms/successful.html',{'postal_code':postal_code, 'country':country, 'parliamentary_constituency':parliamentary_constituency, 'region':region ,'longitude':longitude, 'latitude':latitude})
             else:
                 return render(request, 'sms/error.html',{'error':'Unable to send SMS. Please Try Again.'})
         else:
