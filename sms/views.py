@@ -25,9 +25,12 @@ def sms_view(request):
                 longitude = response['result']['longitude']
                 latitude = response['result']['latitude']
                 region = response['result']['region']
+                incode = response['result']['incode']
+                outcode = response['result']['outcode']
                 parliamentary_constituency = response['result']['parliamentary_constituency']
+                admin_district = response['result']['admin_district']
 
-                return render(request, 'sms/successful.html',{'postal_code':postal_code, 'country':country, 'parliamentary_constituency':parliamentary_constituency, 'region':region ,'longitude':longitude, 'latitude':latitude})
+                return render(request, 'sms/successful.html',{'incode':incode, "outcode":outcode, 'admin_district':admin_district,'postal_code':postal_code, 'country':country, 'parliamentary_constituency':parliamentary_constituency, 'region':region ,'longitude':longitude, 'latitude':latitude})
             else:
                 return render(request, 'sms/error.html',{'error':'Please Check the Postal Code'})
         else:
