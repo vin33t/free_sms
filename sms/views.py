@@ -29,7 +29,7 @@ def sms_view(request):
 
                 return render(request, 'sms/successful.html',{'postal_code':postal_code, 'country':country, 'parliamentary_constituency':parliamentary_constituency, 'region':region ,'longitude':longitude, 'latitude':latitude})
             else:
-                return render(request, 'sms/error.html',{'error':'Unable to send SMS. Please Try Again.'})
+                return render(request, 'sms/error.html',{'error':'Please Check the Postal Code'})
         else:
             #form data is not valid.
             return HttpResponse("Invalid phone number or Message. Try again.")
