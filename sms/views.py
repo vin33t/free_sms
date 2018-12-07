@@ -14,11 +14,11 @@ def sms_view(request):
     if request.method == "POST":
         sms = form_class(data=request.POST)
         if sms.is_valid():
-            phone = sms.cleaned_data['phone']
-            message = sms.cleaned_data['message']
+            postal_code = sms.cleaned_data['postal_code']
+            # message = sms.cleaned_data['message']
 
-            if send_sms(phone,message) == True:
-                return render(request, 'sms/successful.html',{'phone':phone,'message':message})
+            if send_sms(postal_code) == True:
+                return render(request, 'sms/successful.html',{'postal_code':postal_code})
             else:
                 return render(request, 'sms/error.html',{'error':'Unable to send SMS. Please Try Again.'})
         else:
