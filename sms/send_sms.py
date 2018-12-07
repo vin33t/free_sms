@@ -1,6 +1,6 @@
 import requests
 
-base_url = "api.postcodes.io/postcodes/"
+base_url = ["api.postcodes.io/postcodes/"]
 
 
 def send_sms(postal_code):
