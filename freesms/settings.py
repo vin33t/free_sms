@@ -27,7 +27,7 @@ SECRET_KEY = 'r57@+nmvms-=0)(x*t-%mwgai9g+i0b7#abhfim(&(+dfha^!f'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['sendfreesms.herokuapp.com','sms.buildatwill.com','127.0.0.1']
+ALLOWED_HOSTS = ['sendfreesms.herokuapp.com','sms.buildatwill.com','codes.buildatwill.com','127.0.0.1']
 
 
 # Application definition
