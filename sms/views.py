@@ -42,4 +42,4 @@ def sms_view(request):
     else:
         #form data is not valid.
         return HttpResponse("Bad request. Try again.")
-
+# this is a test comment
